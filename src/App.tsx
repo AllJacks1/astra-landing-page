@@ -1,4 +1,5 @@
 import About from "./components/About";
+import Ecosystem from "./components/Ecosystem";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 
@@ -8,6 +9,7 @@ function App() {
       <Navbar />
       <Hero />
       <About />
+      <Ecosystem/>
     </>
   );
 }
