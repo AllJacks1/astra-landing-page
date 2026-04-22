@@ -2,6 +2,7 @@ import About from "./components/About";
 import Ecosystem from "./components/Ecosystem";
 import Founder from "./components/Founder";
 import Hero from "./components/Hero";
+import SystemsDriven from "./components/Methodology";
 import Navbar from "./components/Navbar";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <About />
       <Ecosystem/>
       <Founder/>
+      <SystemsDriven/>
     </>
   );
 }
