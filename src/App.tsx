@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import SystemsDriven from "./components/Methodology";
 import Navbar from "./components/Navbar";
 import People from "./components/People";
+import Services from "./components/Services";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Ecosystem/>
       <Founder/>
       <SystemsDriven/>
+      <Services/>
       <People/>
     </>
   );
