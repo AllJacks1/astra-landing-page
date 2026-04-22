@@ -4,6 +4,7 @@ import Founder from "./components/Founder";
 import Hero from "./components/Hero";
 import SystemsDriven from "./components/Methodology";
 import Navbar from "./components/Navbar";
+import People from "./components/People";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Ecosystem/>
       <Founder/>
       <SystemsDriven/>
+      <People/>
     </>
   );
 }
