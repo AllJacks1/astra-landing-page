@@ -6,6 +6,7 @@ import SystemsDriven from "./components/Methodology";
 import Navbar from "./components/Navbar";
 import People from "./components/People";
 import Services from "./components/Services";
+import WhyAstra from "./components/WhyAstra";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <SystemsDriven/>
       <Services/>
       <People/>
+      <WhyAstra/>
     </>
   );
 }
