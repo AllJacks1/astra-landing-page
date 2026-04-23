@@ -49,7 +49,7 @@ export default function Founder() {
           <div className="founder__image-wrapper">
             <div className="founder__image-container">
               <img
-                src="/founder-mares-nuera.jpg"
+                src="/astra_ceo.png"
                 alt="Mares Mae Cayog Nuera, Founder of Astra Group of Companies"
                 className="founder__image"
                 loading="lazy"
