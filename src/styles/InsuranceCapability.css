@@ -1,0 +1,374 @@
+.insurance-capability {
+  padding: 6rem 0;
+  background: #f8fafc;
+  position: relative;
+  overflow: hidden;
+}
+
+.insurance-capability__container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ── Header ──────────────────────────────────────────────────── */
+
+.insurance-capability__header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 4rem;
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 600ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.insurance-capability--visible .insurance-capability__header {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.insurance-capability__label {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #2a3a9d;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.insurance-capability__title {
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #0f172a;
+  line-height: 1.1;
+  margin: 0 0 1rem;
+}
+
+.insurance-capability__description {
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  font-size: 1.125rem;
+  color: #64748b;
+  line-height: 1.625;
+  margin: 0;
+}
+
+/* ── Grid ────────────────────────────────────────────────────── */
+
+.insurance-capability__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+/* ── Cards ───────────────────────────────────────────────────── */
+
+.insurance-capability__card {
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  background: #ffffff;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 500ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 500ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 300ms ease,
+    border-color 300ms ease;
+}
+
+.insurance-capability--visible .insurance-capability__card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.insurance-capability__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08);
+  border-color: #cbd5e1;
+}
+
+.insurance-capability__card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #2a3a9d;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 300ms ease;
+}
+
+.insurance-capability__card:hover::after {
+  transform: scaleX(1);
+}
+
+/* ── Card Top ────────────────────────────────────────────────── */
+
+.insurance-capability__card-top {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.insurance-capability__card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 0.75rem;
+  background: #eff6ff;
+  color: #2a3a9d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.insurance-capability__card-label {
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #2a3a9d;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ── Card Title ──────────────────────────────────────────────── */
+
+.insurance-capability__card-title {
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 1.25rem;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+/* ── Card List ───────────────────────────────────────────────── */
+
+.insurance-capability__card-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.insurance-capability__card-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+}
+
+.insurance-capability__card-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #2a3a9d;
+  flex-shrink: 0;
+  margin-top: 0.5rem;
+}
+
+.insurance-capability__card-text {
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  font-size: 0.875rem;
+  color: #475569;
+  line-height: 1.6;
+}
+
+/* ── CTA Banner ──────────────────────────────────────────────── */
+
+.insurance-capability__cta {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 600ms cubic-bezier(0.16, 1, 0.3, 1) 400ms,
+    transform 600ms cubic-bezier(0.16, 1, 0.3, 1) 400ms;
+}
+
+.insurance-capability--visible .insurance-capability__cta {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.insurance-capability__cta-inner {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  background: #ffffff;
+  padding: 2rem 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.insurance-capability__cta-inner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #2a3a9d;
+}
+
+.insurance-capability__cta-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 1rem;
+  background: #2a3a9d;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.insurance-capability__cta-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.insurance-capability__cta-title {
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 0.375rem;
+  letter-spacing: -0.01em;
+}
+
+.insurance-capability__cta-text {
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  font-size: 0.9375rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.insurance-capability__cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: #2a3a9d;
+  border: none;
+  border-radius: 0.625rem;
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition:
+    background 200ms ease,
+    transform 200ms ease;
+}
+
+.insurance-capability__cta-button:hover {
+  background: #1e2a70;
+  transform: translateY(-1px);
+}
+
+.insurance-capability__cta-button:active {
+  transform: translateY(0);
+}
+
+/* ── Responsive ──────────────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+  .insurance-capability__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .insurance-capability {
+    padding: 4rem 0;
+  }
+
+  .insurance-capability__grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .insurance-capability__cta-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.75rem;
+    gap: 1.25rem;
+  }
+
+  .insurance-capability__cta-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .insurance-capability__card {
+    padding: 1.5rem;
+  }
+}
+
+/* ── Reduced Motion ──────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  .insurance-capability__header,
+  .insurance-capability__card,
+  .insurance-capability__cta {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .insurance-capability__card::after {
+    transform: scaleX(1);
+  }
+
+  .insurance-capability__cta-button {
+    transition: none;
+  }
+}

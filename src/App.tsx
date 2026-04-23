@@ -2,6 +2,7 @@ import About from "./components/About";
 import Ecosystem from "./components/Ecosystem";
 import Founder from "./components/Founder";
 import Hero from "./components/Hero";
+import InsuranceCapability from "./components/InsuranceCapability";
 import SystemsDriven from "./components/Methodology";
 import Navbar from "./components/Navbar";
 import People from "./components/People";
@@ -20,6 +21,7 @@ function App() {
       <Services/>
       <People/>
       <WhyAstra/>
+      <InsuranceCapability/>
     </>
   );
 }
