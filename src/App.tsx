@@ -7,6 +7,7 @@ import SystemsDriven from "./components/Methodology";
 import Navbar from "./components/Navbar";
 import People from "./components/People";
 import Services from "./components/Services";
+import VisionExpansion from "./components/VisionExpansion";
 import WhyAstra from "./components/WhyAstra";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <People/>
       <WhyAstra/>
       <InsuranceCapability/>
+      <VisionExpansion/>
     </>
   );
 }
