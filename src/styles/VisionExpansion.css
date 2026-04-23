@@ -1,6 +1,6 @@
 .vision-expansion {
   padding: 6rem 0;
-  background: #0f172a;
+  background: #ffffff;
   position: relative;
   overflow: hidden;
 }
@@ -33,7 +33,7 @@
   display: inline-block;
   font-size: 0.875rem;
   font-weight: 600;
-  color: #3b4fb8;
+  color: #2a3a9d;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   margin-bottom: 0.75rem;
@@ -48,7 +48,7 @@
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 800;
   letter-spacing: -0.02em;
-  color: #f8fafc;
+  color: #0f172a;
   line-height: 1.1;
   margin: 0 0 1rem;
 }
@@ -60,7 +60,7 @@
     -apple-system,
     sans-serif;
   font-size: 1.125rem;
-  color: #94a3b8;
+  color: #64748b;
   line-height: 1.625;
   margin: 0;
 }
@@ -86,7 +86,7 @@
 .vision-expansion__spine-track {
   position: absolute;
   inset: 0;
-  background: #1e293b;
+  background: #e2e8f0;
   border-radius: 1px;
 }
 
@@ -148,7 +148,7 @@
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  border: 2px solid #1e293b;
+  border: 2px solid #e2e8f0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -164,7 +164,7 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: #334155;
+  background: #cbd5e1;
   transition:
     background 300ms ease,
     box-shadow 300ms ease;
@@ -172,11 +172,11 @@
 
 .vision-expansion__phase--active .vision-expansion__node-dot {
   background: #2a3a9d;
-  box-shadow: 0 0 0 6px rgba(42, 58, 157, 0.2);
+  box-shadow: 0 0 0 6px rgba(42, 58, 157, 0.12);
 }
 
 .vision-expansion__phase--upcoming .vision-expansion__node-dot {
-  background: #475569;
+  background: #94a3b8;
 }
 
 .vision-expansion__node-label {
@@ -187,21 +187,21 @@
     sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
-  color: #64748b;
+  color: #94a3b8;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
 .vision-expansion__phase--active .vision-expansion__node-label {
-  color: #3b4fb8;
+  color: #2a3a9d;
 }
 
 /* ── Card ────────────────────────────────────────────────────── */
 
 .vision-expansion__card {
-  border: 1px solid #1e293b;
+  border: 1px solid #e2e8f0;
   border-radius: 1rem;
-  background: #1e293b;
+  background: #ffffff;
   padding: 1.75rem;
   position: relative;
   overflow: hidden;
@@ -215,8 +215,8 @@
 
 .vision-expansion__card:hover {
   transform: translateY(-4px);
-  border-color: #334155;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+  border-color: #cbd5e1;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08);
 }
 
 .vision-expansion__phase--active .vision-expansion__card {
@@ -225,7 +225,7 @@
 
 .vision-expansion__phase--active .vision-expansion__card:hover {
   border-color: #3b4fb8;
-  box-shadow: 0 20px 25px -5px rgba(42, 58, 157, 0.15);
+  box-shadow: 0 20px 25px -5px rgba(42, 58, 157, 0.1);
 }
 
 /* ── Card Accent ─────────────────────────────────────────────── */
@@ -236,7 +236,7 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: #334155;
+  background: #e2e8f0;
   transition: background 300ms ease;
 }
 
@@ -261,16 +261,16 @@
   width: 40px;
   height: 40px;
   border-radius: 0.625rem;
-  background: #0f172a;
-  color: #94a3b8;
+  background: #f1f5f9;
+  color: #64748b;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .vision-expansion__phase--active .vision-expansion__card-icon {
-  background: rgba(42, 58, 157, 0.15);
-  color: #3b4fb8;
+  background: #eff6ff;
+  color: #2a3a9d;
 }
 
 .vision-expansion__card-badge {
@@ -288,18 +288,18 @@
 }
 
 .vision-expansion__card-badge--active {
-  background: rgba(42, 58, 157, 0.15);
-  color: #3b4fb8;
+  background: #eff6ff;
+  color: #2a3a9d;
 }
 
 .vision-expansion__card-badge--upcoming {
-  background: #334155;
-  color: #94a3b8;
+  background: #f1f5f9;
+  color: #64748b;
 }
 
 .vision-expansion__card-badge--future {
-  background: #334155;
-  color: #64748b;
+  background: #f8fafc;
+  color: #94a3b8;
 }
 
 /* ── Card Title & Description ────────────────────────────────── */
@@ -312,7 +312,7 @@
     sans-serif;
   font-size: 1.0625rem;
   font-weight: 700;
-  color: #f1f5f9;
+  color: #0f172a;
   margin: 0 0 0.5rem;
   letter-spacing: -0.01em;
   line-height: 1.3;
@@ -325,7 +325,7 @@
     -apple-system,
     sans-serif;
   font-size: 0.875rem;
-  color: #94a3b8;
+  color: #64748b;
   line-height: 1.6;
   margin: 0 0 1.25rem;
 }
@@ -351,14 +351,14 @@
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: #475569;
+  background: #cbd5e1;
   flex-shrink: 0;
   margin-top: 0.5rem;
   transition: background 300ms ease;
 }
 
 .vision-expansion__phase--active .vision-expansion__card-bullet {
-  background: #3b4fb8;
+  background: #2a3a9d;
 }
 
 .vision-expansion__card-text {
@@ -368,7 +368,7 @@
     -apple-system,
     sans-serif;
   font-size: 0.8125rem;
-  color: #94a3b8;
+  color: #475569;
   line-height: 1.55;
 }
 
@@ -391,9 +391,9 @@
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  border: 1px solid #1e293b;
+  border: 1px solid #e2e8f0;
   border-radius: 1rem;
-  background: #1e293b;
+  background: #f8fafc;
   padding: 2rem 2.5rem;
   position: relative;
   overflow: hidden;
@@ -403,8 +403,8 @@
 }
 
 .vision-expansion__vision-inner:hover {
-  border-color: #2a3a9d;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+  border-color: #cbd5e1;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08);
 }
 
 .vision-expansion__vision-inner::after {
@@ -421,8 +421,8 @@
   width: 64px;
   height: 64px;
   border-radius: 1rem;
-  background: rgba(42, 58, 157, 0.15);
-  color: #3b4fb8;
+  background: #eff6ff;
+  color: #2a3a9d;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -442,7 +442,7 @@
     sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
-  color: #f1f5f9;
+  color: #0f172a;
   margin: 0 0 0.5rem;
   letter-spacing: -0.01em;
 }
@@ -454,7 +454,7 @@
     -apple-system,
     sans-serif;
   font-size: 0.9375rem;
-  color: #94a3b8;
+  color: #64748b;
   line-height: 1.6;
   margin: 0;
 }
@@ -463,8 +463,8 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  border: 1px solid #334155;
-  color: #64748b;
+  border: 1px solid #e2e8f0;
+  color: #94a3b8;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -477,8 +477,8 @@
 
 .vision-expansion__vision-inner:hover .vision-expansion__vision-arrow {
   border-color: #2a3a9d;
-  color: #3b4fb8;
-  background: rgba(42, 58, 157, 0.1);
+  color: #2a3a9d;
+  background: #eff6ff;
 }
 
 /* ── Responsive ──────────────────────────────────────────────── */

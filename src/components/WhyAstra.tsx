@@ -54,6 +54,7 @@ const WhyAstra: React.FC = () => {
 
   return (
     <section
+    id="capabilities"
       ref={sectionRef}
       className={`why-astra ${isVisible ? "why-astra--visible" : ""}`}
       aria-labelledby="why-astra-title"

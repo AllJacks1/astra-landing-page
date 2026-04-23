@@ -97,6 +97,7 @@ const VisionExpansion: React.FC = () => {
 
   return (
     <section
+    id="vision"
       ref={sectionRef}
       className={`vision-expansion ${isVisible ? "vision-expansion--visible" : ""}`}
       aria-labelledby="vision-expansion-title"

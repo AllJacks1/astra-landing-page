@@ -1,5 +1,6 @@
 import About from "./components/About";
 import Ecosystem from "./components/Ecosystem";
+import Footer from "./components/Footer";
 import Founder from "./components/Founder";
 import Hero from "./components/Hero";
 import InsuranceCapability from "./components/InsuranceCapability";
@@ -16,14 +17,15 @@ function App() {
       <Navbar />
       <Hero />
       <About />
-      <Ecosystem/>
-      <Founder/>
-      <SystemsDriven/>
-      <Services/>
-      <People/>
-      <WhyAstra/>
-      <InsuranceCapability/>
-      <VisionExpansion/>
+      <Ecosystem />
+      <Founder />
+      <SystemsDriven />
+      <Services />
+      <People />
+      <WhyAstra />
+      <InsuranceCapability />
+      <VisionExpansion />
+      <Footer />
     </>
   );
 }
