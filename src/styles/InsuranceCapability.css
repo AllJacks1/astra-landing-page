@@ -289,6 +289,7 @@
 .insurance-capability__cta-button {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   font-family:
     "Inter",
@@ -297,25 +298,39 @@
     sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
   color: #ffffff;
   background: #2a3a9d;
   border: none;
   border-radius: 0.625rem;
   padding: 0.75rem 1.25rem;
   cursor: pointer;
-  flex-shrink: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
   transition:
     background 200ms ease,
-    transform 200ms ease;
+    transform 200ms ease,
+    box-shadow 200ms ease;
 }
 
 .insurance-capability__cta-button:hover {
   background: #1e2a70;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(42, 58, 157, 0.3);
 }
 
 .insurance-capability__cta-button:active {
   transform: translateY(0);
+}
+
+.insurance-capability__cta-button svg {
+  flex-shrink: 0;
+  transition: transform 200ms ease;
+}
+
+.insurance-capability__cta-button:hover svg {
+  transform: translate(1px, -1px);
 }
 
 /* ── Responsive ──────────────────────────────────────────────── */

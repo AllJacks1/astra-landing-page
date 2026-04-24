@@ -5,7 +5,7 @@ import {
   Headphones,
   TrendingUp,
   Shield,
-  ArrowRight,
+  ArrowUpRight,
 } from "lucide-react";
 import "../styles/InsuranceCapability.css";
 
@@ -151,10 +151,15 @@ const InsuranceCapability: React.FC = () => {
                 advisory through our Astria Insurance Solutions business unit.
               </p>
             </div>
-            <button className="insurance-capability__cta-button" type="button">
+            <a
+              href="https://astriainsurancesolutions.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="insurance-capability__cta-button"
+            >
               <span>Learn More</span>
-              <ArrowRight size={16} strokeWidth={2.5} />
-            </button>
+              <ArrowUpRight size={16} strokeWidth={2.5} />
+            </a>
           </div>
         </div>
       </div>

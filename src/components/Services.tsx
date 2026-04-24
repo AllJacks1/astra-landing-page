@@ -14,6 +14,11 @@ interface Service {
     href: string;
     external?: boolean;
   };
+  cta_social?: {
+    label: string;
+    href: string;
+    external?: boolean;
+  };
   color: string;
 }
 
@@ -35,6 +40,11 @@ const services: Service[] = [
       href: "https://avarissalessolutions.vercel.app/",
       external: true,
     },
+    cta_social: {
+      label: "Visit Facebook Page",
+      href: "https://web.facebook.com/profile.php?id=61576153880445",
+      external: true,
+    },
     color: "#2A3A9D",
   },
   {
@@ -54,7 +64,36 @@ const services: Service[] = [
       href: "https://axismarketingsolutions-virid.vercel.app/",
       external: true,
     },
-    color: "#3B4FB8",
+    cta_social: {
+      label: "Visit Facebook Page",
+      href: "https://web.facebook.com/yourmsaxis",
+      external: true,
+    },
+    color: "#2A3A9D",
+  },
+  {
+    id: "axial",
+    name: "Axial",
+    tagline: "Real Estate Services",
+    description:
+      "Helping families and investors get the right property faster. Residential for steady progress today, and strategic land for big wins tomorrow.",
+    logo: "/axial-logo.png",
+    offerings: [
+      "Residential — condos and house-and-lots ready for quick move-in, with financing via bank or Pag-IBIG",
+      "Strategic Land — raw, agricultural, or commercial sites for long-term growth and high-value opportunities",
+      "Faster matching, easier paperwork, transparent process",
+    ],
+    cta: {
+      label: "Visit AXIAL",
+      href: "https://axialrealestate-services.vercel.app/",
+      external: true,
+    },
+    cta_social: {
+      label: "Visit Facebook Page",
+      href: "https://web.facebook.com/AxialRES",
+      external: true,
+    },
+    color: "#2A3A9D",
   },
   {
     id: "ascend",
@@ -64,19 +103,11 @@ const services: Service[] = [
       "People operations that scale with your business. ASCEND handles recruitment, training, and organizational design so you can focus on growth.",
     logo: "/ascend-logo.png",
     offerings: ["Recruitment", "Training & Organizational Structuring"],
-    color: "#1E2A70",
-  },
-  {
-    id: "aivox",
-    name: "AIVOX",
-    tagline: "Tech Solutions",
-    description:
-      "Custom technology that automate workflows and modernize operations. From web platforms to CRM integrations, AIVOX builds systems that work for you.",
-    logo: "/logos/aivox-logo.svg",
-    offerings: [
-      "Web & systems development",
-      "CRM and systems integration",
-    ],
+    cta_social: {
+      label: "Visit Facebook Page",
+      href: "https://web.facebook.com/wehear.ascend",
+      external: true,
+    },
     color: "#2A3A9D",
   },
   {
@@ -92,7 +123,22 @@ const services: Service[] = [
       href: "https://astriainsurancesolutions.vercel.app/",
       external: true,
     },
-    color: "#3B4FB8",
+    cta_social: {
+      label: "Visit Facebook Page",
+      href: "https://web.facebook.com/astria.insurance",
+      external: true,
+    },
+    color: "#2A3A9D",
+  },
+  {
+    id: "aivox",
+    name: "AIVOX",
+    tagline: "Tech Solutions",
+    description:
+      "Custom technology that automate workflows and modernize operations. From web platforms to CRM integrations, AIVOX builds systems that work for you.",
+    logo: "/logos/aivox-logo.svg",
+    offerings: ["Web & systems development", "CRM and systems integration"],
+    color: "#2A3A9D",
   },
 ];
 
@@ -213,29 +259,55 @@ export default function Services() {
                 ))}
               </ul>
 
-              {/* Optional CTA */}
-              {service.cta && (
-                <a
-                  href={service.cta.href}
-                  className="services__cta"
-                  style={{
-                    color: service.color,
-                    borderColor: `${service.color}30`,
-                  }}
-                  onClick={(e) => handleCtaClick(e, service)}
-                  {...(service.cta.external && {
-                    target: "_blank",
-                    rel: "noopener noreferrer",
-                  })}
-                >
-                  <span>{service.cta.label}</span>
-                  {service.cta.external ? (
-                    <ExternalLink size={14} aria-hidden="true" />
-                  ) : (
-                    <ArrowRight size={14} aria-hidden="true" />
-                  )}
-                </a>
-              )}
+              {/* CTA Row */}
+              <div className="services__cta-row">
+                {service.cta && (
+                  <a
+                    href={service.cta.href}
+                    className="services__cta"
+                    style={{
+                      color: service.color,
+                      borderColor: `${service.color}30`,
+                    }}
+                    onClick={(e) => handleCtaClick(e, service)}
+                    {...(service.cta.external && {
+                      target: "_blank",
+                      rel: "noopener noreferrer",
+                    })}
+                  >
+                    <span>{service.cta.label}</span>
+                    {service.cta.external ? (
+                      <ExternalLink size={14} aria-hidden="true" />
+                    ) : (
+                      <ArrowRight size={14} aria-hidden="true" />
+                    )}
+                  </a>
+                )}
+
+                {service.cta_social && (
+                  <a
+                    href={service.cta_social.href}
+                    className="services__cta services__cta--social"
+                    style={{
+                      background: service.color,
+                      color: "white",
+                      borderColor: `${service.color}30`,
+                    }}
+                    onClick={(e) => handleCtaClick(e, service)}
+                    {...(service.cta_social.external && {
+                      target: "_blank",
+                      rel: "noopener noreferrer",
+                    })}
+                  >
+                    <span>{service.cta_social.label}</span>
+                    {service.cta_social.external ? (
+                      <ExternalLink size={14} aria-hidden="true" />
+                    ) : (
+                      <ArrowRight size={14} aria-hidden="true" />
+                    )}
+                  </a>
+                )}
+              </div>
 
               {/* Bottom accent */}
               <div

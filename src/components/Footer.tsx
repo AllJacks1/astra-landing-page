@@ -10,6 +10,7 @@ import {
   Phone,
   MapPin,
   ArrowUpRight,
+  Users,
 } from "lucide-react";
 import "../styles/Footer.css";
 
@@ -23,22 +24,32 @@ const businessUnits: BusinessUnit[] = [
   {
     icon: <Building2 size={18} strokeWidth={2} />,
     label: "Real Estate",
-    href: "#real-estate",
+    href: "https://axialrealestate-services.vercel.app/",
   },
   {
     icon: <Truck size={18} strokeWidth={2} />,
     label: "Logistics",
-    href: "#logistics",
+    href: "https://www.jmavecars.com/",
   },
   {
     icon: <Coffee size={18} strokeWidth={2} />,
     label: "Hospitality",
-    href: "#hospitality",
+    href: "https://web.facebook.com/ihubdvo",
+  },
+  {
+    icon: <Phone size={18} strokeWidth={2} />,
+    label: "Sales Solutions",
+    href: "https://avarissalessolutions.vercel.app/",
   },
   {
     icon: <Briefcase size={18} strokeWidth={2} />,
-    label: "Business Solutions",
-    href: "#business-solutions",
+    label: "Marketing Solutions",
+    href: "https://axismarketingsolutions-virid.vercel.app/",
+  },
+  {
+    icon: <Users size={18} strokeWidth={2} />,
+    label: "Human Resources",
+    href: "https://web.facebook.com/wehear.ascend",
   },
   {
     icon: <Cpu size={18} strokeWidth={2} />,
@@ -48,7 +59,7 @@ const businessUnits: BusinessUnit[] = [
   {
     icon: <Shield size={18} strokeWidth={2} />,
     label: "Insurance",
-    href: "#insurance",
+    href: "https://astriainsurancesolutions.vercel.app/",
   },
 ];
 
@@ -60,23 +71,23 @@ const quickLinks = [
   { label: "Contact", href: "#contact" },
 ];
 
-const socialLinks = [
-  {
-    icon: <Cpu size={20} strokeWidth={2} />,
-    label: "LinkedIn",
-    href: "#",
-  },
-  {
-    icon: <Cpu size={20} strokeWidth={2} />,
-    label: "Facebook",
-    href: "#",
-  },
-  {
-    icon: <Cpu size={20} strokeWidth={2} />,
-    label: "Instagram",
-    href: "#",
-  },
-];
+// const socialLinks = [
+//   {
+//     icon: <Cpu size={20} strokeWidth={2} />,
+//     label: "LinkedIn",
+//     href: "#",
+//   },
+//   {
+//     icon: <Cpu size={20} strokeWidth={2} />,
+//     label: "Facebook",
+//     href: "#",
+//   },
+//   {
+//     icon: <Cpu size={20} strokeWidth={2} />,
+//     label: "Instagram",
+//     href: "#",
+//   },
+// ];
 
 const Footer: React.FC = () => {
   const footerRef = useRef<HTMLElement>(null);
@@ -144,16 +155,20 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Business Units column */}
-          <div className="footer__column">
+          <div className="footer__column footer__column--units">
             <h3 className="footer__column-title">Business Units</h3>
-            <ul className="footer__column-list">
+            <ul className="footer__column-list footer__column-list--grid">
               {businessUnits.map((unit, index) => (
                 <li
                   key={unit.label}
                   className="footer__column-item"
-                  style={{ transitionDelay: `${index * 80}ms` }}
+                  style={{ transitionDelay: `${index * 60}ms` }}
                 >
-                  <a href={unit.href} className="footer__column-link">
+                  <a
+                    href={unit.href}
+                    className="footer__column-link"
+                    target="_blank"
+                  >
                     <span className="footer__column-icon">{unit.icon}</span>
                     <span className="footer__column-label">{unit.label}</span>
                     <ArrowUpRight
@@ -202,7 +217,7 @@ const Footer: React.FC = () => {
               All rights reserved.
             </p>
           </div>
-          <div className="footer__bottom-right">
+          {/* <div className="footer__bottom-right">
             <ul className="footer__social">
               {socialLinks.map((social) => (
                 <li key={social.label}>
@@ -216,7 +231,7 @@ const Footer: React.FC = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
