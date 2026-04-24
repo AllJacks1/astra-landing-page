@@ -261,7 +261,7 @@
 .hero__inner {
   position: relative;
   z-index: 1;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
@@ -369,7 +369,6 @@
 }
 
 .hero__title-accent {
-  display: block;
   background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #2a3a9d 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -564,8 +563,16 @@
     min-height: auto;
   }
 
+  .hero__inner {
+    max-width: 800px;
+  }
+
   .hero__title {
     font-size: 3rem;
+  }
+
+  .hero__title-accent {
+    display: block;
   }
 
   .hero__subtitle {
