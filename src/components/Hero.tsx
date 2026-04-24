@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import { ArrowRight } from "lucide-react";
 import "../styles/Hero.css";
+import { Helmet } from "react-helmet-async";
 
 interface Particle {
   x: number;
@@ -166,29 +167,52 @@ export default function Hero() {
   };
 
   return (
-    <section
-      ref={sectionRef}
-      className={`hero ${isVisible ? "hero--visible" : ""}`}
-      aria-labelledby="hero-title"
-    >
-      {/* Layered background system */}
-      <div className="hero__bg" aria-hidden="true">
-        {/* Deep gradient base */}
-        <div className="hero__bg-deep" />
+    <>
+      <Helmet>
+        <title>
+          Astra Group of Companies | Integrated Business Solutions Philippines
+        </title>
+        <meta
+          name="description"
+          content="End-to-end support across sales, marketing, HR, finance, technology, and operations."
+        />
+      </Helmet>
+      <section
+        ref={sectionRef}
+        className={`hero ${isVisible ? "hero--visible" : ""}`}
+        aria-labelledby="hero-title"
+      >
+        {/* Layered background system */}
+        <div className="hero__bg" aria-hidden="true">
+          {/* Deep gradient base */}
+          <div className="hero__bg-deep" />
 
-        {/* Animated mesh orbs */}
-        <div className="hero__bg-orb hero__bg-orb--1" />
-        <div className="hero__bg-orb hero__bg-orb--2" />
-        <div className="hero__bg-orb hero__bg-orb--3" />
+          {/* Animated mesh orbs */}
+          <div className="hero__bg-orb hero__bg-orb--1" />
+          <div className="hero__bg-orb hero__bg-orb--2" />
+          <div className="hero__bg-orb hero__bg-orb--3" />
 
-        {/* Particle canvas */}
-        <canvas ref={canvasRef} className="hero__bg-canvas" />
+          {/* Particle canvas */}
+          <canvas ref={canvasRef} className="hero__bg-canvas" />
 
-        {/* Floating star constellation */}
-        <div className="hero__bg-stars">
-          <div className="hero__bg-star-cluster">
+          {/* Floating star constellation */}
+          <div className="hero__bg-stars">
+            <div className="hero__bg-star-cluster">
+              <svg
+                className="hero__bg-star hero__bg-star--main"
+                viewBox="0 0 200 200"
+                fill="none"
+              >
+                <path
+                  d="M100 0L123.5 76.5L200 100L123.5 123.5L100 200L76.5 123.5L0 100L76.5 76.5L100 0Z"
+                  fill="currentColor"
+                />
+              </svg>
+              <div className="hero__bg-star-ring" />
+              <div className="hero__bg-star-ring hero__bg-star-ring--2" />
+            </div>
             <svg
-              className="hero__bg-star hero__bg-star--main"
+              className="hero__bg-star hero__bg-star--small-1"
               viewBox="0 0 200 200"
               fill="none"
             >
@@ -197,83 +221,72 @@ export default function Hero() {
                 fill="currentColor"
               />
             </svg>
-            <div className="hero__bg-star-ring" />
-            <div className="hero__bg-star-ring hero__bg-star-ring--2" />
+            <svg
+              className="hero__bg-star hero__bg-star--small-2"
+              viewBox="0 0 200 200"
+              fill="none"
+            >
+              <path
+                d="M100 0L123.5 76.5L200 100L123.5 123.5L100 200L76.5 123.5L0 100L76.5 76.5L100 0Z"
+                fill="currentColor"
+              />
+            </svg>
           </div>
-          <svg
-            className="hero__bg-star hero__bg-star--small-1"
-            viewBox="0 0 200 200"
-            fill="none"
-          >
-            <path
-              d="M100 0L123.5 76.5L200 100L123.5 123.5L100 200L76.5 123.5L0 100L76.5 76.5L100 0Z"
-              fill="currentColor"
-            />
-          </svg>
-          <svg
-            className="hero__bg-star hero__bg-star--small-2"
-            viewBox="0 0 200 200"
-            fill="none"
-          >
-            <path
-              d="M100 0L123.5 76.5L200 100L123.5 123.5L100 200L76.5 123.5L0 100L76.5 76.5L100 0Z"
-              fill="currentColor"
-            />
-          </svg>
+
+          {/* Light rays */}
+          <div className="hero__bg-rays" />
+
+          {/* Glass overlay */}
+          <div className="hero__bg-glass" />
         </div>
 
-        {/* Light rays */}
-        <div className="hero__bg-rays" />
+        <div className="container hero__inner">
+          {/* Floating badge */}
+          <div className="hero__badge">
+            <span className="hero__badge-pulse" />
+            <span>Integrated Business Solutions</span>
+          </div>
 
-        {/* Glass overlay */}
-        <div className="hero__bg-glass" />
-      </div>
+          {/* Headline */}
+          <h1 id="hero-title" className="hero__title">
+            Astra Group
+            <span className="hero__title-accent"> of Companies</span>
+          </h1>
 
-      <div className="container hero__inner">
-        {/* Floating badge */}
-        <div className="hero__badge">
-          <span className="hero__badge-pulse" />
-          <span>Integrated Business Solutions</span>
-        </div>
+          {/* Subheadline */}
+          <p className="hero__subtitle">
+            Your Partner in Every Business Journey
+          </p>
 
-        {/* Headline */}
-        <h1 id="hero-title" className="hero__title">
-          Astra Group
-          <span className="hero__title-accent"> of Companies</span>
-        </h1>
+          {/* Description */}
+          <p className="hero__description">
+            End-to-end support across sales, marketing, HR, finance, technology,
+            and operations for startups, SMEs, and enterprise partners.
+          </p>
 
-        {/* Subheadline */}
-        <p className="hero__subtitle">Your Partner in Every Business Journey</p>
+          {/* CTA Group */}
+          <div className="hero__actions">
+            <button
+              className="hero__btn hero__btn--primary"
+              onClick={handleExplore}
+              type="button"
+            >
+              <span className="hero__btn-shine" />
+              <span>Explore Our Ecosystem</span>
+              <ArrowRight size={18} aria-hidden="true" />
+            </button>
 
-        {/* Description */}
-        <p className="hero__description">
-          End-to-end support across sales, marketing, HR, finance, technology,
-          and operations for startups, SMEs, and enterprise partners.
-        </p>
+            <button
+              className="hero__btn hero__btn--secondary"
+              onClick={handleWatchVideo}
+              type="button"
+            >
+              Why choose Astra?
+            </button>
+          </div>
 
-        {/* CTA Group */}
-        <div className="hero__actions">
-          <button
-            className="hero__btn hero__btn--primary"
-            onClick={handleExplore}
-            type="button"
-          >
-            <span className="hero__btn-shine" />
-            <span>Explore Our Ecosystem</span>
-            <ArrowRight size={18} aria-hidden="true" />
-          </button>
-
-          <button
-            className="hero__btn hero__btn--secondary"
-            onClick={handleWatchVideo}
-            type="button"
-          >
-            Why choose Astra?
-          </button>
-        </div>
-
-        {/* Stats */}
-        {/* <div className="hero__stats">
+          {/* Stats */}
+          {/* <div className="hero__stats">
           <div className="hero__stat">
             <span className="hero__stat-number">8</span>
             <span className="hero__stat-label">Business Units</span>
@@ -289,13 +302,14 @@ export default function Hero() {
             <span className="hero__stat-label">Years</span>
           </div>
         </div> */}
-      </div>
+        </div>
 
-      {/* Scroll indicator */}
-      <div className="hero__scroll" aria-hidden="true">
-        <div className="hero__scroll-line" />
-        <div className="hero__scroll-dot" />
-      </div>
-    </section>
+        {/* Scroll indicator */}
+        <div className="hero__scroll" aria-hidden="true">
+          <div className="hero__scroll-line" />
+          <div className="hero__scroll-dot" />
+        </div>
+      </section>
+    </>
   );
 }

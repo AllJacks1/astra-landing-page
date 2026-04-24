@@ -2,9 +2,238 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
+
+    <!-- ========================================
+         PRIMARY META TAGS
+         ======================================== -->
+    <title>
+      Astra Group of Companies | Integrated Business Solutions Philippines
+    </title>
+    <meta
+      name="description"
+      content="Astra Group provides end-to-end business solutions in Sales, Marketing, HR, Finance, Technology, and Operations for startups, SMEs, and enterprise partners across the Philippines."
+    />
+    <meta
+      name="keywords"
+      content="business solutions Philippines, sales outsourcing, marketing agency, HR solutions, real estate brokerage, insurance advisory, technology solutions, logistics Philippines, hospitality management, SME support"
+    />
+    <meta name="author" content="Astra Group of Companies, Inc." />
+    <meta
+      name="robots"
+      content="index, follow, max-snippet:160, max-image-preview:large"
+    />
+    <link rel="canonical" href="https://astragroup.ph" />
+
+    <!-- ========================================
+         OPEN GRAPH (Facebook, LinkedIn, etc.)
+         ======================================== -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Astra Group of Companies" />
+    <meta property="og:url" content="https://astragroup.ph" />
+    <meta
+      property="og:title"
+      content="Astra Group of Companies | Integrated Business Solutions"
+    />
+    <meta
+      property="og:description"
+      content="End-to-end support across sales, marketing, HR, finance, technology, and operations for startups, SMEs, and enterprise partners."
+    />
+    <meta property="og:image" content="https://astragroup.ph/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Astra Group of Companies - Integrated Business Solutions"
+    />
+    <meta property="og:locale" content="en_PH" />
+
+    <!-- ========================================
+         TWITTER/X CARDS
+         ======================================== -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@AstraGroupPH" />
+    <meta
+      name="twitter:title"
+      content="Astra Group of Companies | Integrated Business Solutions"
+    />
+    <meta
+      name="twitter:description"
+      content="End-to-end business solutions in Sales, Marketing, HR, Finance, Technology, and Operations."
+    />
+    <meta name="twitter:image" content="https://astragroup.ph/og-image.jpg" />
+    <meta name="twitter:image:alt" content="Astra Group of Companies" />
+
+    <!-- ========================================
+         FAVICONS & APP ICONS
+         ======================================== -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#2A3A9D" />
+    <meta name="msapplication-TileColor" content="#2A3A9D" />
+
+    <!-- ========================================
+         PERFORMANCE & SECURITY
+         ======================================== -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- ========================================
+         STRUCTURED DATA: ORGANIZATION
+         ======================================== -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Astra Group of Companies, Inc.",
+        "alternateName": "Astra Group",
+        "url": "https://astragroup.ph",
+        "logo": "https://astragroup.ph/astra-logo.png",
+        "description": "Integrated business solutions provider offering end-to-end support in Sales, Marketing, HR, Finance, Technology, and Operations across the Philippines.",
+        "foundingDate": "2020",
+        "founder": {
+          "@type": "Person",
+          "name": "Mares Mae Cayog Nuera",
+          "jobTitle": "Founder & CEO",
+          "description": "Licensed Real Estate Broker with 15+ years experience across real estate, logistics, hospitality, and business solutions."
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "PH",
+          "addressRegion": "Mindanao",
+          "addressLocality": "Philippines"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+63-912-345-6789",
+          "contactType": "customer service",
+          "email": "hello@astragroup.ph",
+          "availableLanguage": ["English", "Filipino"]
+        },
+        "sameAs": [
+          "https://www.facebook.com/AstraGroupPH",
+          "https://www.linkedin.com/company/astra-group-of-companies"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Business Solutions",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "AVARIS Sales Solutions",
+                "description": "End-to-end sales operations including lead generation, sales team deployment, and closing systems."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "AXIS Marketing Solutions",
+                "description": "Full-spectrum marketing including branding, digital marketing, and traditional marketing campaigns."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Axial Real Estate Services",
+                "description": "Residential and strategic land property matching with financing support via bank or Pag-IBIG."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "ASCEND HR Solutions",
+                "description": "Recruitment, training, and organizational structuring for scalable people operations."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "ASTRIA Insurance Solutions",
+                "description": "Life insurance, non-life insurance, and comprehensive insurance advisory services."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "AIVOX Technology Solutions",
+                "description": "Web development, systems integration, and CRM automation for modern businesses."
+              }
+            }
+          ]
+        }
+      }
+    </script>
+
+    <!-- ========================================
+         STRUCTURED DATA: LOCAL BUSINESS
+         ======================================== -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Astra Group of Companies",
+        "image": "https://astragroup.ph/astra-logo.png",
+        "@id": "https://astragroup.ph",
+        "url": "https://astragroup.ph",
+        "telephone": "+63-912-345-6789",
+        "email": "hello@astragroup.ph",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "PH",
+          "addressRegion": "Mindanao"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "7.1907",
+          "longitude": "125.4553"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        "priceRange": "$$",
+        "areaServed": {
+          "@type": "Country",
+          "name": "Philippines"
+        }
+      }
+    </script>
+
+    <!-- ========================================
+         STRUCTURED DATA: WEBSITE
+         ======================================== -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Astra Group of Companies",
+        "url": "https://astragroup.ph",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://astragroup.ph/search?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

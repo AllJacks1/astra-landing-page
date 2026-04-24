@@ -7,6 +7,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import "../styles/Methodology.css";
+import LeadForm from "./LeadForm";
 
 const steps = [
   {
@@ -47,6 +48,7 @@ export default function SystemsDriven() {
   const sectionRef = useRef<HTMLElement>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [activeStep, setActiveStep] = useState<number | null>(null);
+  const [formOpen, setFormOpen] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -156,7 +158,7 @@ export default function SystemsDriven() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="systems__footer">
+        {/* <div className="systems__footer">
           <p className="systems__footer-text">
             Ready to systematize your business?
           </p>
@@ -164,16 +166,16 @@ export default function SystemsDriven() {
             href="#contact"
             className="systems__cta"
             onClick={(e) => {
+              setFormOpen(true);
               e.preventDefault();
-              document
-                .querySelector("#contact")
-                ?.scrollIntoView({ behavior: "smooth" });
             }}
           >
             Start Your Transformation
           </a>
-        </div>
+        </div> */}
       </div>
+
+      <LeadForm isOpen={formOpen} onClose={() => setFormOpen(false)} />
     </section>
   );
 }
