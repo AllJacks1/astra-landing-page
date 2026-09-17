@@ -255,12 +255,12 @@ export const articleData: ArticleData = {
             "Transparent Transactions – Clear property details, costs, and timelines with no hidden steps",
           ],
         },
-        {
-          title: "Built on Trust and Execution",
-          type: "content",
-          content:
-            "Led by Mares Mae Cayog Nuera, a licensed real estate broker with over a decade of experience, Axial was built to address a critical gap in the market: lack of education and compliance in property transactions. By combining brokerage, client education, and full-process support, Axial ensures that every peso invested leads to a property that is secure, compliant, and ready for ownership.",
-        },
+        // {
+        //   title: "Built on Trust and Execution",
+        //   type: "content",
+        //   content:
+        //     "Led by Mares Mae Cayog Nuera, a licensed real estate broker with over a decade of experience, Axial was built to address a critical gap in the market: lack of education and compliance in property transactions. By combining brokerage, client education, and full-process support, Axial ensures that every peso invested leads to a property that is secure, compliant, and ready for ownership.",
+        // },
         {
           title: "Ecosystem Integration",
           type: "bullets",

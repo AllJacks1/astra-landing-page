@@ -38,7 +38,7 @@ function LandingPage() {
       <Hero />
       <About />
       <Ecosystem />
-      <Founder />
+      {/* <Founder /> */}
       <SystemsDriven />
       <Services />
       <HowItWorks/>
