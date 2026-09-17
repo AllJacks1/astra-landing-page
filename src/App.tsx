@@ -3,7 +3,7 @@ import About from "./components/About";
 import ArticlePage from "./components/ArticlePage";
 import Ecosystem from "./components/Ecosystem";
 import Footer from "./components/Footer";
-import Founder from "./components/Founder";
+//import Founder from "./components/Founder";
 import Hero from "./components/Hero";
 import SystemsDriven from "./components/Methodology";
 import Navbar from "./components/Navbar";
