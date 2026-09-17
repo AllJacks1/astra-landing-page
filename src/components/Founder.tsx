@@ -42,11 +42,11 @@ export default function Founder() {
     >
       <div className="container founder__inner">
         {/* Section Label */}
-        <span className="founder__label">Leadership</span>
+        {/* <span className="founder__label">Leadership</span> */}
 
         <div className="founder__layout">
           {/* Image Column */}
-          <div className="founder__image-wrapper">
+          {/* <div className="founder__image-wrapper">
             <div className="founder__image-container">
               <img
                 src="/astra_ceo.png"
@@ -54,17 +54,14 @@ export default function Founder() {
                 className="founder__image"
                 loading="lazy"
               />
-              {/* Decorative elements */}
               <div className="founder__image-accent" aria-hidden="true" />
               <div className="founder__image-frame" aria-hidden="true" />
             </div>
-
-            {/* Floating badge */}
             <div className="founder__badge">
               <Award size={16} aria-hidden="true" />
               <span>15+ Years Experience</span>
             </div>
-          </div>
+          </div> */}
 
           {/* Content Column */}
           <div className="founder__content">
